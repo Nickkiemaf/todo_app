@@ -1,4 +1,4 @@
-import { createTables } from "..src/model/todoModel.js"
+import { createTables } from "../src/model/todoModel.js"
 import { pool } from "../src/config/db.js"
 
 
