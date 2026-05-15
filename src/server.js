@@ -11,6 +11,14 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+app.get("/", (req, res) => {
+  return res.status(200).json({
+    status: "ok",
+    message: "server is healthy",
+    timestamp: Date.now()
+  })
+})
+
 app.use("/todo", todoRouter)
 
 
