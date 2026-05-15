@@ -13,14 +13,18 @@ export const myDailyTask = async (data) => {
       ]
     )
 
-    const dailyTasks = daily.rows[0]
+    if (daily.rows.length === 0) {
+      throw new Error("No tasks for this month")
+    }
+
+    const dailyTasks = daily.rows
 
     return dailyTasks
 
   } catch (error) {
     console.log(error)
   } finally {
-    (await client).release()
+    client.release()
   }
 }
 
@@ -36,13 +40,21 @@ export const myMonthlyTask = async (data) => {
       ]
     )
 
-    const monthlyTasks = daily.rows[0]
+    if (month.rows.length === 0) {
+      throw new Error("No tasks for this month")
+    }
+
+    const monthlyTasks = month.rows
 
     return monthlyTasks
 
+
   } catch (error) {
     console.log(error)
+    throw error
+
+
   } finally {
-    (await client).release()
+    client.release()
   }
 }

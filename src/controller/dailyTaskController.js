@@ -1,4 +1,4 @@
-import { myDailyTask, myMonthlyTask } from "../service/dailyTaskService"
+import { myDailyTask, myMonthlyTask } from "../service/dailyTaskService.js"
 
 export const dailyTask = async (req, res) => {
 
@@ -19,7 +19,7 @@ export const dailyTask = async (req, res) => {
     })
 
   } catch (error) {
-    console.log(error)
+    console.log(error.message || "Internal Server error")
   }
 }
 
@@ -37,11 +37,11 @@ export const monthlyTask = async (req, res) => {
     const months = await myMonthlyTask({ user_id })
 
     return res.status(200).json({
-      message: "Today's tasks",
+      message: "Month's tasks",
       data: months
     })
 
   } catch (error) {
-    console.log(error)
+    console.log(error.message || "Internal Server error")
   }
 }
