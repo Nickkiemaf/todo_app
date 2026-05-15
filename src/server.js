@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 import cors from "cors"
 import { testDatabase } from "./config/db.js"
 import todoRouter from "./route/todo.js"
+import { runMigration } from "../scripts/migration.js"
 dotenv.config()
 
 
