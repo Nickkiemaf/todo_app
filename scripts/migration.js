@@ -1,5 +1,5 @@
-import { pool } from "../config/db.js"
-import { createTables } from "../model/todoModel.js"
+import { pool } from "..src//config/db.js"
+import { createTables } from "..src//model/todoModel.js"
 
 export const runMigration = async () => {
 
