@@ -20,4 +20,6 @@ export const runMigration = async () => {
   }
 }
 
-//runMigration()
+runMigration()
+
+
