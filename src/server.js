@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 app.use("/todo", todoRouter)
 
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 10000
 
 app.listen(PORT, () => {
   console.log("Server is running...")
