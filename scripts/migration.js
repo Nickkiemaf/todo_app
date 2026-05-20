@@ -8,16 +8,17 @@ export const runMigration = async () => {
 
   try {
     await createTables()
-    await pool.end()
+    //await pool.end()
 
     console.log("Migration successful")
 
   } catch (error) {
     console.error(error)
 
-  } finally {
-    process.exit(0)
   }
+  // finally {
+  //   process.exit(0)
+  // }
 }
 
 //runMigration()
