@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 import cors from "cors"
 import { testDatabase } from "./config/db.js"
 import todoRouter from "./route/todo.js"
+import statRouter from "./route/stats.js"
 import { runMigration } from "../scripts/migration.js"
 dotenv.config()
 
@@ -21,6 +22,7 @@ app.get("/", (req, res) => {
 })
 
 app.use("/todo", todoRouter)
+app.use("/todo", statRouter)
 
 
 const PORT = process.env.PORT || 10000

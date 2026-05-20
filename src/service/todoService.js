@@ -35,7 +35,6 @@ export const userSignup = async (data) => {
 
 
     console.log("Insert result:", user.rows)
-    console.log("Token", token)
 
     return userResult
 

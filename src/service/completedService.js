@@ -15,6 +15,7 @@ export const myDoneTasks = async (data) => {
 
     const newlyTask = done.rows[0]
 
+
     return newlyTask
 
   } catch (error) {
@@ -40,7 +41,7 @@ export const myUnDoneTasks = async (data) => {
 
     const undone = unDone.rows[0]
 
-    return unDone
+    return undone
 
   } catch (error) {
     console.log(error)

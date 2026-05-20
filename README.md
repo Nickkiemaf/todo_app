@@ -1,11 +1,13 @@
-PROJECT TITLE
-Todo App
+PROJECT TITLE: Todo App
 
-FEATURES
+FEATURES:
+
 CREATE new users, tasks
 READ tasks
 UPDATE tasks
 DELETE users, tasks
+
+BASE_URL: https://todo-app-t31e.onrender.com
 
 TABLE OF CONTENTS
 
@@ -17,41 +19,42 @@ Express/nodejs
 Postgresql
 
 3. Routes
+GET todo/stats
 
 POST todo/signup
 { name, email, phone, address, password } = req.body
 
-POST /login
+POST todo/login
 { email, password } = req.body
 
-POST /createTask
+POST todo/createTask
 { user_id, task_name, description, deadline, category_id } = req.body
 
-POST /createCategory
+POST todo/createCategory
 { name, color } = req.body
 
-GET /allcategory
+GET todo/allcategory
 
-PATCH /editTask
+PATCH todo/editTask
 { task_name, description, deadline, category_id, user_id } = req.body
 
-GET /allTasks
+GET todo/allTasks
 { user_id } = req.body
 
-GET /completeTask
+GET todo/completeTask
 { user_id } = req.body
 
-GET /uncompleteTask
+GET todo/uncompleteTask
 { user_id } = req.body
 
-GET /done
+GET todo/done
 { user_id, task_id } = req.body
 
-GET /undone
+GET todo/undone
 { user_id, task_id } = req.body
 
-router.get("/dailyTask", dailyTask)
+GET todo/dailyTask
 { user_id } = req.body
 
-router.get("/monthlyTask", monthlyTask)
+GET todo/monthlyTask
 { user_id } = req.body
