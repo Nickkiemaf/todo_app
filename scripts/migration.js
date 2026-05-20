@@ -2,7 +2,7 @@ import { createTables } from "../src/model/todoModel.js"
 import { pool } from "../src/config/db.js"
 
 
-console.log("migration!!!!")
+console.log("migration!!")
 
 export const runMigration = async () => {
 
