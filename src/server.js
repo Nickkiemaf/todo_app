@@ -21,6 +21,7 @@ app.get("/", (req, res) => {
   })
 })
 
+//routes
 app.use("/todo", todoRouter)
 app.use("/todo", statRouter)
 
